@@ -1,6 +1,6 @@
 
 package basics;
-
+import java.util.Scanner;
 /**
  *
  * @author aragondb12
@@ -38,10 +38,58 @@ public class Basics {
              cont++;
              fact=fact*cont;
          }
-        int num=3;
-        for (int i = 1; i <=num; i++) {
-            System.out.println(num=num*i);
+        int num=4;
+        int fac=1;
+        /*for (int i = num; i == 1; i--) {
+            System.out.println(fac=num*i);
+        }*/
+        int linea=5;
+        for (int i = 1; i<=num; i++) {
+            System.out.println(fac=fac*i);
         }
-    } 
-    
+         do{
+             System.out.println("Linea numero: "+ linea);
+             linea--;
+         }while(linea!=0);
+         System.out.println("=======================================");
+          int num1, num2,res;
+          
+         Scanner entrada= new Scanner(System.in);
+         System.out.print("Ingrese el primer numero: ");
+         //num1= entrada.nextInt();
+         System.out.print("Ingrese el segundo numero: ");
+         //num2= entrada.nextInt();
+         //res= num1+num2;
+         //System.out.println("Resultado= "+res);
+         System.out.println("=======================================");
+         int a,b,c,aux;
+         System.out.print("N1:");
+         a=entrada.nextInt();
+         System.out.print("N2:");
+         b=entrada.nextInt();
+         System.out.print("N3:");
+         c=entrada.nextInt();
+        if (a<b) {
+            if (b<c) {
+                System.out.println("A,B,C"+a+b+c);
+            }
+            if(a<c){
+                System.out.println("A,C,B"+a+c+b);
+            }else{
+                System.out.println("C,A,B"+c+a+b);
+            }
+        }else{
+            if (c<b) {
+                System.out.println("C,B,A"+c+b+a);
+            }else{
+                if (a<c) {
+                    System.out.println("B,A,C"+b+a+c);
+                }else{
+                    System.out.println("B,A,C"+b+a+c);
+                }
+            }
+        
+        }
+         
+    }
 }
